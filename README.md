@@ -75,7 +75,7 @@ This will create a new folder named ColorCode (or whatever your repository is na
 Go into the project folder:
  - cd ColorCode
 
-###Step 2: Install Project Dependencies
+### Step 2: Install Project Dependencies
 
 1. For Swift/SwiftUI projects, dependencies are typically managed by Xcode itself using Swift Package Manager, or sometimes by a tool like CocoaPods.
 
@@ -83,7 +83,8 @@ Go into the project folder:
 
 3. Xcode Handles Dependencies: Xcode will usually detect and download any required Swift Packages automatically.
 
-###Step 3: Firebase Setup (The Online Database Part)
+### Step 3: Firebase Setup (The Online Database Part)
+
 .This project uses Google's Firebase for its online database.
 .Create a Firebase Project
 .Go to Firebase Console
@@ -93,7 +94,7 @@ Go into the project folder:
 .Give your project a name (e.g., "MyColorCodeApp").
 .Follow the prompts and click "Create project".
 
-#Add iOS App
+# Add iOS App
 .Click the iOS icon in your Firebase project dashboard.
 .Enter your iOS Bundle ID (from Xcode: General > Bundle Identifier).
 .(Optional) App Nickname and App Store ID.
@@ -105,7 +106,7 @@ Go into the project folder:
 
 Make sure "Copy items if needed" and your app target are selected.
 
-#Set Up Firestore -
+# Set Up Firestore -
 .In Firebase Console, go to Firestore Database.
 .Click "Create database" > "Start in test mode".
 .Choose a location (e.g., nam5 for India) > Click "Enable".
