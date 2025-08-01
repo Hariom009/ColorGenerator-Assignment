@@ -16,4 +16,15 @@ class NetworkMonitor: ObservableObject{
         }
         monitor.start(queue: queue)
     }
+    func refreshConnectionStatus() {
+        let monitor = NWPathMonitor()
+        monitor.pathUpdateHandler = { path in
+            DispatchQueue.main.async {
+                self.isConnected = path.status == .satisfied
+                print("Manual Check - Internet Connection: \(self.isConnected ? "Online" : "Offline")")
+            }
+            monitor.cancel() // Stop after getting the first result
+        }
+        monitor.start(queue: queue)
+    }
 }

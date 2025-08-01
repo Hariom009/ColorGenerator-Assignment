@@ -51,19 +51,19 @@ struct HomeView: View {
             }
             .padding()
             .navigationTitle("Color Generator")
-//            .toolbar{
-//                Button{
-//                    
-//                }label:{
-//                    Circle()
-//                        .fill(networkMonitor.isConnected ? Color.green : Color.red)
-//                        .frame(width: 10, height: 10)
-//                    Text("\(networkMonitor.isConnected ? "Online" : "Offline")")
-//                        .font(.system(size: 10))
-//                        .fontWeight(.semibold)
-//                        .foregroundStyle(.black)
-//                }
-//            }
+            .toolbar{
+                Button{
+                    networkMonitor.refreshConnectionStatus()
+                }label:{
+                    Circle()
+                        .fill(networkMonitor.isConnected ? Color.green : Color.red)
+                        .frame(width: 10, height: 10)
+                    Text("\(networkMonitor.isConnected ? "Online" : "Offline")")
+                        .font(.system(size: 10))
+                        .fontWeight(.semibold)
+                        .foregroundStyle(.black)
+                }
+            }
         }
         .onChange(of: networkMonitor.isConnected) { connected in
             if connected {
