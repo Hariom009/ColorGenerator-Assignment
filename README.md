@@ -53,19 +53,19 @@ Now, let's get the project files onto your computer and set up the online databa
 
 ### Step 1: Clone the Repository
 
-First, we need to download the project's code.
+- First, we need to download the project's code.
 
 **Open your Terminal:**
 
-On macOS: Search for "Terminal".
+- **On macOS**: Search for "Terminal".
 
-**Navigate to where you want to save the project:**
+- **Navigate to where you want to save the project:**
 
 For example:
 
-- **cd Desktop
-- **mkdir Projects
-- **cd Projects 
+- **cd Desktop**
+- **mkdir Projects**
+- **cd Projects**
 
 Clone the project:
 git clone https://github.com/Hariom009/ColorGenerator-Assignment
@@ -73,7 +73,7 @@ git clone https://github.com/Hariom009/ColorGenerator-Assignment
 This will create a new folder named ColorCode (or whatever your repository is named) with all the project files inside it.
 
 Go into the project folder:
- - cd ColorCode
+ - **cd ColorCode**
 
 ### Step 2: Install Project Dependencies
 
@@ -89,43 +89,43 @@ Go into the project folder:
 - **Create a Firebase Project
 - **Go to Firebase Console
 
-- **Sign in with your Google Account.
-- **Click "Add project".
-- **Give your project a name (e.g., "MyColorCodeApp").
-- **Follow the prompts and click "Create project".
+- Sign in with your Google Account.
+- Click "Add project".
+- Give your project a name (e.g., "MyColorCodeApp").
+- Follow the prompts and click "Create project".
 
 # Add iOS App
-- **Click the iOS icon in your Firebase project dashboard.
-- **Enter your iOS Bundle ID (from Xcode: General > Bundle Identifier).
-- **(Optional) App Nickname and App Store ID.
-- **Click "Register app".
+- Click the iOS icon in your Firebase project dashboard.
+- Enter your iOS Bundle ID (from Xcode: General > Bundle Identifier).
+- (Optional) App Nickname and App Store ID.
+- lick "Register app".
 
-- **Download GoogleService-Info.plist
-- **Download the GoogleService-Info.plist file.
-- **In Xcode, drag the file into your Project Navigator.
+- Download GoogleService-Info.plist
+- Download the GoogleService-Info.plist file.
+- In Xcode, drag the file into your Project Navigator.
 
 Make sure "Copy items if needed" and your app target are selected.
 
 # Set Up Firestore -
-- **In Firebase Console, go to Firestore Database.
-- **Click "Create database" > "Start in test mode".
-- **Choose a location (e.g., nam5 for India) > Click "Enable".
+- In Firebase Console, go to Firestore Database.
+- Click "Create database" > "Start in test mode".
+- Choose a location (e.g., nam5 for India) > Click "Enable".
 
 
 ## How to Run the Project : 
 
-- **Open .xcodeproj or .xcworkspace in Xcode.
-- **Select a simulator/device (e.g., iPhone 15 Pro).
-- **Click the Run button (play icon).
+- Open .xcodeproj or .xcworkspace in Xcode.
+- Select a simulator/device (e.g., iPhone 15 Pro).
+- Click the Run button (play icon).
 
 You should now see the ColorCode application running! Try generating some colors and observe local and cloud syncing behavior.
 
 ## How It Works: 
 
-- **Generating Colors: The app picks 3 random numbers (RGB) and turns them into a hex string.
-- **Local Storage: Uses UserDefaults to store ID, hex code, and timestamp.
-- **Firebase: Saves the same data to Firestore when online.
-- **Network Monitor: Uses tools like NWPathMonitor to check internet status.
-- **Smart Syncing:
-- **Online: Save to both local and Firebase.
-- **Offline → Online: Sync unsynced local data to Firebase.
+- **Generating Colors**: The app picks 3 random numbers (RGB) and turns them into a hex string.
+- **Local Storage**: Uses UserDefaults to store ID, hex code, and timestamp.
+- **Firebase**: Saves the same data to Firestore when online.
+- **Network Monitor**: Uses tools like NWPathMonitor to check internet status.
+  **Smart Syncing**:
+- **Online**: Save to both local and Firebase.
+- **Offline** → Online: Sync unsynced local data to Firebase.
