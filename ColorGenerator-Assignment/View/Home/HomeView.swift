@@ -23,13 +23,6 @@ struct HomeView: View {
                 
                 GenerateButton
             }
-            .background(
-                LinearGradient(
-                    colors: [Color(.systemBackground), Color(.systemGray6)],
-                    startPoint: .top,
-                    endPoint: .bottom
-                )
-            )
             .navigationTitle("Color Generator")
             //.navigationBarTitleDisplayMode(.large)
             .toolbar {
@@ -41,7 +34,7 @@ struct HomeView: View {
         .sheet(item: $selectedColor) { color in
             ColorDetailView(colorCode: color)
         }
-        .onChange(of: networkMonitor.isConnected) { connected in
+        .onChange(of: networkMonitor.isConnected) { _,connected in
             if connected {
                 Task {
                     await FirebaseManager.shared.syncUnsyncedColors(context: context)
@@ -105,7 +98,6 @@ struct HomeView: View {
         }
         .padding(.horizontal, 20)
         .padding(.vertical, 16)
-        .background(.ultraThinMaterial)
     }
     
     // MARK: - Main Content
