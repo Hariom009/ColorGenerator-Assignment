@@ -85,9 +85,9 @@ Go into the project folder:
 
 ### Step 3: Firebase Setup (The Online Database Part)
 
-- **This project uses Google's Firebase for its online database.
-- **Create a Firebase Project
-- **Go to Firebase Console
+- This project uses Google's Firebase for its online database.
+- Create a Firebase Project
+- Go to Firebase Console
 
 - Sign in with your Google Account.
 - Click "Add project".
