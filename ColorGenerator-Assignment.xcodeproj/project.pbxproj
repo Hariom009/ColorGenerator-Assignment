@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		BF6763942E3CFE6700E28994 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = BF6763932E3CFE6700E28994 /* FirebaseFirestore */; };
+		BF6763962E3CFE6700E28994 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = BF6763952E3CFE6700E28994 /* FirebaseStorage */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		BF67636F2E3C93C600E28994 /* ColorGenerator-Assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ColorGenerator-Assignment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,6 +28,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF6763942E3CFE6700E28994 /* FirebaseFirestore in Frameworks */,
+				BF6763962E3CFE6700E28994 /* FirebaseStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +72,8 @@
 			);
 			name = "ColorGenerator-Assignment";
 			packageProductDependencies = (
+				BF6763932E3CFE6700E28994 /* FirebaseFirestore */,
+				BF6763952E3CFE6700E28994 /* FirebaseStorage */,
 			);
 			productName = "ColorGenerator-Assignment";
 			productReference = BF67636F2E3C93C600E28994 /* ColorGenerator-Assignment.app */;
@@ -94,6 +103,9 @@
 			);
 			mainGroup = BF6763662E3C93C600E28994;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				BF6763922E3CFE6700E28994 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = BF6763702E3C93C600E28994 /* Products */;
 			projectDirPath = "";
@@ -324,6 +336,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BF6763922E3CFE6700E28994 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BF6763932E3CFE6700E28994 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BF6763922E3CFE6700E28994 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		BF6763952E3CFE6700E28994 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BF6763922E3CFE6700E28994 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BF6763672E3C93C600E28994 /* Project object */;
 }
