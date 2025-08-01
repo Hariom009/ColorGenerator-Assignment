@@ -24,7 +24,7 @@ struct ColorGenerator_AssignmentApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     var body: some Scene {
         WindowGroup {
-            ContentView()
+         HomeView()
         }
         .modelContainer(for: [ColorCode.self])
     }
