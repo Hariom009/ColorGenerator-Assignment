@@ -26,6 +26,6 @@ struct ColorGenerator_AssignmentApp: App {
         WindowGroup {
             ContentView()
         }
-        .modelContainer(for: ColorCode.self)
+        .modelContainer(for: [ColorCode.self])
     }
 }

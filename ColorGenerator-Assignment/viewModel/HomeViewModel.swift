@@ -22,5 +22,12 @@ class HomeViewModel: ObservableObject {
 
         let newColorCode = ColorCode(hex: hex)
         context.insert(newColorCode)
+
+        do {
+            try context.save()
+        } catch {
+            print("Failed to save context: \(error.localizedDescription)")
+        }
     }
+
 }

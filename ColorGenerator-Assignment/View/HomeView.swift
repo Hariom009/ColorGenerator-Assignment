@@ -3,7 +3,7 @@ import SwiftData
 
 
 struct HomeView: View {
-    @Query var colours : [ColorCode]
+    @Query(sort: \ColorCode.createdAt, order: .reverse) var colours: [ColorCode]
     @Environment(\.modelContext) private var context
     @StateObject private var viewModel = HomeViewModel()
     @StateObject private var networkMonitor = NetworkMonitor()
@@ -13,6 +13,11 @@ struct HomeView: View {
             VStack(spacing: 16) {
                 Button{
                     viewModel.generateRandomColor(context: context)
+                    if networkMonitor.isConnected{
+                        Task {
+                            await FirebaseManager.shared.syncUnsyncedColors(context: context)
+                        }
+                    }
                 }label:{
                     Text("Generate Color")
                         .font(.headline)
